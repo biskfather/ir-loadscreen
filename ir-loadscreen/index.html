@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading... [Infinite Roleplay]</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="assets/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="server-info">
+            <img src="./assets/logo.png" alt="Server Logo" class="logo">
+            
+            <h1 class="server-name">Infinite Roleplay</h1>
+            <p class="welcome-message">Prepare for an immersive, lore-friendly roleplay experience.</p>
+        </div>
+
+        <div class="progress-area">
+            <p id="loading-status">Connecting to server...</p>
+            
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            
+            <div class="tips-slider">
+                <p>TIP: <span id="current-tip">Press M to access the phone menu.</span></p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="https://discord.gg/yourinvite" target="_blank" class="link-item">
+                <i class="fab fa-discord"></i> Discord
+            </a>
+            <a href="#" id="music-toggle" class="link-item">
+                <i class="fas fa-volume-up"></i> Music
+            </a>
+            <a href="#" id="rules-button" class="link-item">
+                <i class="fas fa-gavel"></i> Rules
+            </a>
+            <a href="#" id="staff-button" class="link-item">
+                <i class="fas fa-users"></i> Staff
+            </a>
+        </div>
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="assets/music.mp3" type="audio/mp3">
+    </audio>
+    
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="rules-modal">&times;</span>
+            <h2><i class="fas fa-gavel"></i> Server Rules</h2>
+            <div id="rules-list" class="content-area">
+                </div>
+        </div>
+    </div>
+
+    <div id="staff-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="staff-modal">&times;</span>
+            <h2><i class="fas fa-users"></i> Staff Team</h2>
+            <div id="staff-list" class="content-area">
+                </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
